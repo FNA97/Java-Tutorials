@@ -1,0 +1,14 @@
+public class Test3 {
+
+   public static void main(String args[]) {
+      int x = 30;// x i tanımla değeri 30 ata
+      int y = 10;// y yi tanımla değeri 10 olarak ata
+
+      if( x == 30 ) {// eğer x = 30 ise devam et
+         if( y == 10 ) { // eğer y = 10 ise devam et
+            System.out.print("X = 30 and Y = 10"); // iki koşul da sağlandı
+            // x 30 ve y 10 yazdır
+         }
+      }
+   }
+}
