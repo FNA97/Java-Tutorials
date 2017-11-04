@@ -1,0 +1,25 @@
+public class Test4{
+
+   public static void main(String args[]) {
+      char grade = 'C'; // grade i karakter olarak tanımla değeri C olarak ata
+
+      switch(grade) { // switch yapısını grade üzerine uygula
+         case 'A' : // not A ise
+            System.out.println("Excellent!"); // yazdır 
+            break;// durdur
+         case 'B' :// b ise birşey yapma
+         case 'C' :// c ise
+            System.out.println("Well done");// yazdır
+            break;//durdur
+         case 'D' :// d ise
+            System.out.println("You passed"); // yazdır
+         case 'F' ://f ise
+            System.out.println("Better try again"); // yazdır
+            break;//durdur
+         default :// eğer tanımlı case lerden biri değilse; Örneğin grade = 'X'
+         // olarak girilirse
+            System.out.println("Invalid grade");//yazdır
+      }
+      System.out.println("Your grade is " + grade);// notunuz +grade
+   }
+}
