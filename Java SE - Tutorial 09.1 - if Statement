@@ -1,0 +1,10 @@
+public class Test1 {
+
+   public static void main(String args[]) {
+      int x = 10;// x i tanımla değeri 10 olarak ata
+
+      if( x < 20 ) { // eğer ki x < 20 ise
+         System.out.print("This is if statement"); // bu if yapısıdır yazdır
+      }
+   }
+}
