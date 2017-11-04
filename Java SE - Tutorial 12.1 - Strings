@@ -1,0 +1,32 @@
+public class Test {
+
+   public static void main(String args[]) {
+       float floatVar= 4.5f;
+       int intVar=3;
+       String stringVar = new String("Furkan");
+       char[] helloArray = { 'h', 'e', 'l', 'l', 'o', '.' };
+       String helloString = new String(helloArray);  // helloString diye bir string tanımla
+      // bu string helloArray listesi olsun şeklinde bir tanımlama yapılmış.
+      //bu nedenle helloArray ın 0. elemanından 5. elemanına kadar yan yana yazdırır ve helloString in değerini bu şekilde atar.
+       System.out.println( helloString );//print hello.
+      
+      /* Test2 */
+       String palindrome = "Dot saw I was Tod";//palindrome stringi tanımla
+       int len = palindrome.length();// len değişkeni tanımla
+      //.length() methodu ile palindrome ' nin uzunlugunu al
+      //bunu integer değer olarak belirle
+       System.out.println( "String Length is : " + len );// uzunlugu 17
+      /* Test 3 */
+       String string1 = "saw I was ";// stringi tanımla
+       System.out.println("Dot " + string1 + "Tod");// dot stringine string1 i ekle ve ardından Tod u ekleyip printle
+      /* Test 4 */
+       String fs;
+       fs = String.format("The value of the float variable is " +
+       "%f, while the value of the integer " +
+       "variable is %d, and the string " +
+       "is %s", floatVar, intVar, stringVar);
+       System.out.println(fs);// paragraf yazarken kullanılabilir.
+    
+       
+   }
+}
