@@ -1,0 +1,30 @@
+public class Test14 {
+
+	   public static void main(String[] args) {
+	      double[] myList = {1.9, 2.9, 3.4, 3.5};//double türünde bir dizi tanımla
+
+	      // Tüm elemanları yazdırma
+	      for (int i = 0; i < myList.length; i++) {//döngü 0 dan başlasın her seferinde 1 artsın ve dizimin boyutundan kucuk oldugunda
+	         System.out.println(myList[i] + " ");//listemin i.'nci elamanını bana yazdırsın
+	      }
+	     
+	      // Tüm elemanları toplama
+	      double total = 0;//total double türünde ilk değeri 0
+	      for (int i = 0; i < myList.length; i++) {// döngü 0 dan başlasın her seferinde 1 artsın ve dizimin boyutundan kucuk oldugunda
+	         total += myList[i];//totale dizimin i.'nci elemanıı ekle
+	      }
+	      System.out.println("Total is " + total);//toplamı yazdır.
+	      
+	      // En büyük elemanı bulma
+	      double max = myList[0];// en büyük eleman baslangıç için listemin 1. elamı yani 1.9 olsun
+	      for (int i = 1; i < myList.length; i++) {//listemin tüm elemanları dönsün
+	         if (myList[i] > max) max = myList[i];//eğer benim seçtiğim maxdan büyük bir değer varsa bu benim yeni max ım olsun.
+	      }
+	      System.out.println("Max is " + max);  //En büyüğü yazdır.
+	      
+	      for (double element: myList) {//double eleman = myList dedik
+	         System.out.println(element);//elemanları yazdır
+	         //farklı bir for tanımı..
+	   }
+	   }
+}
