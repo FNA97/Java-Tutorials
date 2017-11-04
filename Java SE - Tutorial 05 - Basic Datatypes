@@ -1,0 +1,26 @@
+class Deneme { // Deneme diye yeni bir class açtık
+   public void InsanYas() { //Method tanımlıyoruz.
+      int yas = 0; // Yaşın ilk değeri 0 olarak tanımlayalım.
+      yas +=20; // 20 Ekleyelim.
+      System.out.println("Insanın yaşı : " + yas); // Yazdıralım.
+   }
+}
+      
+public class BasicDataTypes{
+
+     public static void main(String []args){
+         int a, b, c;         // a,b,c yi değer atamadan tanımladık
+         a = 10;b = 10; // a ve b ye 10 değerini atadık.
+         System.out.println("a="+a+" ve b="+b);
+         byte B = 22;         // B değişkenine bir byte tanımladık
+         System.out.println(B);
+         double pi = 3.14159; // pi yi 3.14 olarak atadık ve aynı zamanda tanımladık
+         System.out.println(pi);
+         char d = 'a';        // d değişkeni tanımladık ve a karakterini atadık
+         System.out.println(d);
+         System.out.println("\n\n\n");
+         Deneme deneme = new Deneme();
+         deneme.InsanYas();
+        
+     }
+}
