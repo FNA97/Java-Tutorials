@@ -1,0 +1,18 @@
+public class Test2 {
+
+   public static void main(String args[]) {
+
+      String name = "James";
+      boolean result = name instanceof String;
+      System.out.println( result );
+      // Burada ise name değişkeni "James" stringi olarak belirlenmiş.
+      // result un boolen bir değer olduğunu tanımlamış ve
+      // result un değerini 'insanteof' operatorü belirliyor.
+      // instanceof String dediğimiz zaman bu operator name değişkeninin
+      // string olup olmadığını kontrol ediyor.
+      // Eğer bu operator bir string ise Boolen olarak 1 değerini yani True
+      // değilse 0 yani False değerini çeviriyor.
+      // Bu test de system.out.println(result); dersek
+      // bize True printler çünkü name değişkeni String bir değere sahip.
+   }
+}
