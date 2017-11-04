@@ -1,0 +1,16 @@
+public class Test4 {
+
+   public static void main(String args[]) {
+      int [] numbers = {10, 20, 30, 40, 50};// Liste tanımla
+
+      for(int x : numbers ) {// numbers listesinden oluşan for döngüsü
+      // değişkenimiz x
+         if( x == 30 ) { // eğer x = 30 olursa 
+            break;//döngü dursun
+         }
+         System.out.print( x );// print x
+         // 30 u yazmıyor. Çünkü önce if e girdi 30 oldu direk döngü durdu.
+         System.out.print("\n");// yeni satır
+      }
+   }
+}
