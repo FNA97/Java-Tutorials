@@ -1,0 +1,7 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("anlamadım.");
+        System.out.println("https://www.tutorialspoint.com/java/java_modifier_types.htm");
+     }
+}
