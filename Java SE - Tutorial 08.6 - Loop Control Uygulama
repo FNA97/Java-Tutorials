@@ -1,0 +1,20 @@
+public class Test6 {
+
+   public static void main(String args[]) {
+      int [] numbers = {10, 20, 30, 40, 50};//numbers listesi tanımla
+
+      for(int x : numbers ) {//listeyi döndür
+      // değişken x
+         System.out.print( x );//print x
+         System.out.print(",");// print ,
+      }
+      System.out.print("\n");// yeni satır
+      String [] names = {"James", "Larry", "Tom", "Lacy"};//names listesi tanımla
+
+      for( String name : names ) {// names listesini döndür
+      // değişken name
+         System.out.print( name );//print name
+         System.out.print(",");// print ,
+      }
+   }
+}
