@@ -1,0 +1,15 @@
+public class Test5 {
+
+   public static void main(String args[]) {
+      int [] numbers = {10, 20, 30, 40, 50}; // numbers listesi tanımla
+
+      for(int x : numbers ) {// listeyi döndür
+      // değişken x
+         if( x == 30 ) { // x = 30 ise 
+            continue;// devam et
+         }
+         System.out.print( x );// print x
+         System.out.print("\n");// yeni satır
+      }
+   }
+}
