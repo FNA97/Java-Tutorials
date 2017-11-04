@@ -1,0 +1,30 @@
+public class Insan {
+   int InsanYas;
+
+   public Insan(String isim) {
+      // Yine tek parametreli bir constructor
+      System.out.println("İsmi : " + isim );
+   }
+
+   public void setYas( int yas ) {
+      InsanYas = yas;
+   }
+   public int getYas( ) {
+      System.out.println("Yaşı : " + InsanYas );
+      return InsanYas;
+   }
+
+   public static void main(String []args) {
+      // Object oluşturma
+      Insan Insan1 = new Insan( "Furkan" );
+
+      // Insan1 in yaşını setYas ile belirleyelim
+      Insan1.setYas( 20 );
+
+      // getYas ile setYas daki değeri elde edelim.
+      Insan1.getYas( );
+
+      // Ekrana bastıralım 
+      System.out.println("getYas ile elde edilen değer :" + Insan1.InsanYas );
+   }
+}
