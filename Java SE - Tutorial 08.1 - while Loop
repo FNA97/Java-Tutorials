@@ -1,0 +1,12 @@
+public class Test1 {
+
+   public static void main(String args[]) {
+      int x = 10; // x i tanımla,değeri 10 olsun
+
+      while( x < 20 ) { // x < 20 iken şunları yap;
+         System.out.print("value of x : " + x ); // x in değerini yazdır.
+         x++; // x i sağdan 1 arttır.
+         System.out.print("\n");//Yeni satır ekle
+      }
+   }
+}
