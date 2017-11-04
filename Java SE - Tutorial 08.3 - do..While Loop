@@ -1,0 +1,16 @@
+public class Test3{
+
+   public static void main(String args[]) {
+      int x = 10; // x i tanımla,değerini 10 yap
+
+      do { // Süslü parantezler içinde olanları yap
+      // ama do nun koşulu aşağıda yazdığımız while
+      // ne zaman ki x < 20 ise do yu gerçekleştirir.
+      // ancak x < 20 değilse bunu yapmaz ve programda başka bir kod
+      // olmadığından sonlanır.
+         System.out.print("value of x : " + x ); // x in değeri
+         x++;// sağdan 1 arttır
+         System.out.print("\n");// yeni satır ekle
+      }while( x < 20 );//koşul
+   }
+}
