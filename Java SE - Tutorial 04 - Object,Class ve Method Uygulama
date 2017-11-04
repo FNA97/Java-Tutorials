@@ -1,0 +1,59 @@
+import java.io.*;
+class Calisan{
+
+   String adi;
+   int yasi;
+   String gorevi;
+   double maasi;
+
+   // Calisan class ının constructor ını oluşturalım.
+   public Calisan(String isim) {
+      this.adi = isim;
+   }
+
+   // yaş
+   public void calYas(int calYas) {
+      yasi = calYas;
+   }
+
+   // görevi
+   public void calGorev(String calGorev) {
+      gorevi = calGorev;
+   }
+
+   //maaşı
+   public void calMaasi(double calMaasi) {
+      maasi = calMaasi;
+   }
+
+   // Yukarıda tanımladıklarımızı printleyelim.
+   public void yazdirTumu() {
+      System.out.println("Adı    :  " + adi );
+      System.out.println("Yaşı   :  " + yasi );
+      System.out.println("Görevi :  " + gorevi);
+      System.out.println("Maaşı  :  " + maasi +"\n\n");
+   }
+}
+
+public class CalisanTest {
+//Burada ise calisan classındakileri kullanarak yeni calısanların
+//ozelliklerini girelim.
+   public static void main(String args[]) {
+      //Calisan class ın daki constructor ı kullanarak
+      //2 yeni calışan ekleyelim.
+      
+      Calisan cal1 = new Calisan("Furkan Aşkın");
+      Calisan cal2 = new Calisan("Özgün Çalıkoğlu");
+
+      // Her yeni object için gerekli bilgileri girelim.
+      cal1.calYas(20);
+      cal1.calGorev("Mobile App. Junior Developer");
+      cal1.calMaasi(1000);
+      cal1.yazdirTumu();
+
+      cal2.calYas(19);
+      cal2.calGorev("Junior Web Developer");
+      cal2.calMaasi(1000);
+      cal2.yazdirTumu();
+   }
+}
