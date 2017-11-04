@@ -1,0 +1,31 @@
+import java.util.*;
+public class GregorianCalendarDemo {
+
+   public static void main(String args[]) {
+      String months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+         "Oct", "Nov", "Dec"};//aylar adlı bir dizi tanımladık
+      
+      int year;//yıl ı tanımladık integer olarak
+      
+      // Miladi takvim uygulaması
+      
+      GregorianCalendar gcalendar = new GregorianCalendar();//yeni object tanımlama
+      
+      // Şuan ki tarih ve saat i yazdırma.
+      System.out.print("Date: ");//tarih
+      System.out.print(months[gcalendar.get(Calendar.MONTH)]);//get ile tarih i elde etme(ay)
+      System.out.print(" " + gcalendar.get(Calendar.DATE) + " ");//get ile tarih elde etme(gün)
+      System.out.println(year = gcalendar.get(Calendar.YEAR));//get ile tarih elde etme(yıl)
+      System.out.print("Time: ");//zaman
+      System.out.print(gcalendar.get(Calendar.HOUR) + ":");//get saat
+      System.out.print(gcalendar.get(Calendar.MINUTE) + ":");//get dakika 
+      System.out.println(gcalendar.get(Calendar.SECOND));//get saniye
+
+      // Test edelim
+      if(gcalendar.isLeapYear(year)) {
+         System.out.println("The current year is a leap year");//doğruysa
+      }else {
+         System.out.println("The current year is not a leap year");//yanlışsa
+      }
+   }
+}
