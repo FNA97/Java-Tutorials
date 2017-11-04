@@ -1,0 +1,8 @@
+public class Test {
+
+   public static void main(String args[]) {
+      int x = 5; // x i tanımla değeri 5 olarak ata
+      x =  x + 10;   // x i 10 arttır
+      System.out.println(x); //yazdır
+   }
+}
