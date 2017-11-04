@@ -1,0 +1,23 @@
+public class Test {
+
+   public static void main(String args[]) {
+      int a, b;
+      a = 10;
+      b = (a == 1) ? 20: 30;
+      System.out.println( "Value of b is : " +  b );
+
+      b = (a == 10) ? 20: 30;
+      System.out.println( "Value of b is : " + b );
+   }
+}
+
+// Şeklinde bir uygulama verilmiş.İnceleyelim
+// a nın ilk değeri 10 olarak belirlenmiş.
+// b = (a == 1) ? 20: 30; burada diyor ki;
+// a = 1 mi eğer 1 ise b==20 olsun değilse b==30 olsun
+// buradan b=30 olarak belirlenir.
+
+//b = (a == 10) ? 20: 30; burada diyor ki;
+// a = 10 mu? (Evet.) O halde b==20 olarak belirlensin.
+// Print lere gelecek olursak ilk olarak b nın değeri 30 diyecek
+// Sonra da b nin değeri 20 diyecek.
