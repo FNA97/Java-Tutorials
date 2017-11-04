@@ -1,0 +1,12 @@
+public class Test2{
+
+   public static void main(String args[]) {
+      int x = 30;// x i tanımla değeri 30 ata
+
+      if( x < 20 ) {// eğer x < 20 ise
+         System.out.print("This is if statement"); // bu if yapısıdır yazdır
+      }else {// koşul sağlanmıyorsa x < 20 değilse
+         System.out.print("This is else statement"); // bu else yapısıdır yazdır
+      }
+   }
+}
