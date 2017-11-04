@@ -1,0 +1,21 @@
+public class Test {
+
+   public static void main(String args[]) {
+      System.out.println("She said \"Hello!\" to me.");
+      System.out.println("Merhaba,\tben Furkan Aşkın.");// tab ekler
+      System.out.println("Yapılacaklar;\b Tutorialları tamamla.");//madde haline getirir.
+      System.out.println("Merhaba,\nben Furkan Aşkın.");//yeni satır ekler
+      System.out.println("Merhaba, \rben Furkan Aşkın.");//satırbaşı yapar
+      System.out.println("Merhaba, \fben Furkan Aşkın.");// Form besleme
+      // \' tırnak ekler \" çift tırnak ekler // koda mesaj yazmamızı sağlar
+      System.out.println(Character.isLetter('c'));//Bu method bize girilen veri bir karakter iste True değilse False döndürür.
+      System.out.println(Character.isDigit('5'));
+      System.out.println(Character.isWhitespace('\n'));//yazı yazarken kullandığımız bir terimse True
+      System.out.println(Character.isUpperCase('C'));//Büyük mü kontrolü,True.
+      System.out.println(Character.isLowerCase('c'));// Küçük mü kontrolü,True.
+      System.out.println(Character.toUpperCase('c'));// Karakteri büyütme methodu
+      System.out.println(Character.toLowerCase('C'));//Karakteri küçültme methodu
+      System.out.println(Character.toString('c'));//Stringe çevirme
+      
+   }
+}
