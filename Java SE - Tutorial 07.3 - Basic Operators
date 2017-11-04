@@ -1,0 +1,16 @@
+class Vehicle {}// araçlar adlı bir class oluşturduk
+
+public class Car extends Vehicle {
+    // Burada extends dediğimiz zaman
+    // Car ve Vehicle aslında iki farklı class ama extends sayesinde
+    // Car class ı Vehicle class ını genişletir ve orada tanımladığımız method
+    // ları alır ve bunları kullanabilir.
+
+   public static void main(String args[]) {
+
+      Vehicle a = new Car(); // a aracı yeni bir araba olsun şeklinde tanımladık
+      boolean result =  a instanceof Car; // a bir araba ise boolen bir sonuç dondursun
+      System.out.println( result ); // a bir arabamı ? evet. O halde true döner.
+      // TEST3
+   }
+}
