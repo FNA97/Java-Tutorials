@@ -1,0 +1,11 @@
+public class Test2{
+
+   public static void main(String args[]) {
+
+      for(int x = 10; x < 20; x = x + 1) {// i x tanımla ve değerini 10 yap
+      // x < 20 iken x i her seferinde 1 arttır.
+         System.out.print("value of x : " + x ); // x in değeri
+         System.out.print("\n");// yeni satır
+      }
+   }
+}
