@@ -1,0 +1,48 @@
+public class TestMethods {
+
+   public static void main(String args[]) {
+       //charAt()
+      String s = "Strings are immutable";
+      char result = s.charAt(8);//s stringinin 8.Karakteri
+      System.out.println(result);//yazdır
+      //compareTo()
+      String str1 = "Strings are immutable";
+      String str2 = new String("Strings are immutable");
+      String str3 = new String("Integers are not immutable");
+      
+      int result2 = str1.compareTo(str2);//str1 ve str2 eşit mi?
+      System.out.println(result2);//eşit 0 döndür
+      
+      result2 = str2.compareTo(str3);//str2 ve str3 eşit mi?
+      System.out.println(result2);//değil 0 hariç bir değer döndür(Genelde negatif)
+      result2 = str1.compareToIgnoreCase( str2 );
+      System.out.println(result2);
+
+      result2 = str2.compareToIgnoreCase( str3 );
+      System.out.println(result2);
+      //Concat()
+      String ss1 = new String("Strings are immutable");//s1 string tanımla 
+      ss1 = ss1.concat(" all the time");//concat() ile stringe ekleme yap
+      System.out.println(ss1);//yazdır
+      //ContentEquals()
+      boolean  result3 = str1.contentEquals( str2 );//str1 ve str2 eşit mi?
+      System.out.println(result3);//Evet.Boolen döndür,True
+	  
+      result3 = str2.contentEquals( str3 );//str2 ve str3 eşit mi?
+      System.out.println(result3);//Hayır.Boolen döndür,False
+      //CopyValueOf()
+      char[] Str1 = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};//Karakterleri tanımla liste şeklinde
+      String Str2 = "";// str2 boş bir string olsun
+      Str2 = Str2.copyValueOf( Str1 );//str1 deki değerleri str2 ye kopyala
+      System.out.println("Returned String: " + Str2);//Geri döndürülen string,str2
+      Str2 = Str2.copyValueOf( Str1, 2, 6 );//Str1 in kaçıncı elemanları arası alınsın?
+      System.out.println("Returned String: " + Str2);//Print
+      //EndsWith()
+      boolean retVal = ss1.endsWith("the time");//ss1(Yukarıda tanımlı) immutable ile mi bitiyor?
+      System.out.println("Returned Value = " + retVal );//Evet.Boolean döndür True
+      //Boolean Equals()
+      retVal = Str1.equals( Str2 );//str1 eşit mi str2?
+      System.out.println("Returned Value = " + retVal );//False
+      
+   }
+}
