@@ -1,0 +1,11 @@
+class insan {
+    enum insanCinsiyet{ Bay,Bayan }/* enum bize belirli seçim yapma hakkı tanır. Burada cinsiyet olarak sadece bay ve bayan seçilmesini istedim.*/
+    insanCinsiyet cinsiyet;
+}
+public class insanCinsiyetBelirle { // cinsiyet belirle diye bir class olusturdum //
+    public static void main(String []args){
+        insan yeni = new insan(); // yeni bir insan tanımladım
+        yeni.cinsiyet = insan.insanCinsiyet.Bay; // cinsiyeti bay olarak belirledim
+        System.out.println("Yeni insan cinsiyeti : " + yeni.cinsiyet + " olarak belirlendi."); // Cinsiyeti bay olarak printledik.
+    }
+}
