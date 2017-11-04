@@ -1,0 +1,13 @@
+import java.util.*;
+public class SleepDemo {
+
+   public static void main(String args[]) {
+      try { 
+         System.out.println(new Date( ) + "\n"); //programı belirlediğimiz süre boyunca uykuya alıyor.Hiçbir işlem yapmıyor.
+         Thread.sleep(15*60*10); 
+         System.out.println(new Date( ) + "\n"); //sonra devam ediyor.
+      } catch (Exception e) {
+         System.out.println("Got an exception!"); //hata varsa catch e giriyor ve printliyor.
+      }
+   }
+}
