@@ -1,0 +1,35 @@
+public class Test {
+
+   public static void main(String args[]) {
+      Integer x = 5; // x i tanımla değeri 5 olarak ata
+      System.out.println( x.byteValue() );// byte a çevir
+      System.out.println(x.doubleValue());//double a çevir
+      System.out.println(x.longValue());// long a çevir
+      System.out.println(x.compareTo(3));// büyükse 1 döndür
+      System.out.println(x.compareTo(5));//eşitse 0
+      System.out.println(x.compareTo(8)); //küçükse -1
+      Integer y = 3;// y i tanımla değerini 3 olarak ata
+      System.out.println(x.equals(y));// eşit mi değil mi kontrol et boolean çevir(False)
+      Integer b = Integer.valueOf("444",16);// 444 ü hexadecimal e çevirir
+      System.out.println(b);//1092
+      System.out.println(x.toString());// integer değeri stringe çevirir.
+      //System.out.println(x.parseInt(9));//değeri decimal hexidecimal e çevirmek için kullanılır
+      System.out.println(Math.abs(x));// integer bir değerin mutlak değerini alır x=-5 olsa 5 çıktısı verirdi
+      System.out.println(Math.ceil(x));// sayıyı kendisinden büyük en yakın tam sayıya yuvarlar
+      System.out.println(Math.floor(x));//sayıyı kendisinden küçük en yakın tam sayıya yuvarlar
+      System.out.println(Math.rint(x));// double değeri kendinden büyük en yakın double tam sayı değerine yuvarlar 101.75 i 102.0 gibi
+      System.out.println(Math.round(x));//double bir değeri kendinden büyük en yakın tam sayıya yuvarlar
+      System.out.println(Math.min(12.123, 12.456));//listedeki en küçük elemanı yazdırır
+      System.out.println(Math.max(12.123, 12.456));//listedeki en büyük elemanı yazdırır
+      System.out.println(Math.exp(x));//log e tabanı
+      System.out.println(Math.log(x));//logaritma
+      System.out.println(Math.sqrt(x));//sayının karekökü
+      System.out.println(Math.sin(Math.toRadians(x)));//sayının sin değeri
+      System.out.println(Math.cos(Math.toRadians(x)));//sayının cos değeri
+      System.out.println(Math.tan(Math.toRadians(x)));//sayının tan değeri
+      System.out.println(Math.asin(Math.toRadians(x)));//sayının arc sin değeri
+      System.out.println(Math.acos(Math.toRadians(x)));//sayının arc cos değeri
+      System.out.println(Math.atan(Math.toRadians(x)));//sayının arc tan değeri
+      System.out.println( Math.random() );//Rastgele sayı elde etme
+   }
+}
