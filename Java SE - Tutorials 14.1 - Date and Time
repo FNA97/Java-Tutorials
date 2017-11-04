@@ -1,0 +1,11 @@
+import java.util.Date;
+public class DateDemo {
+
+   public static void main(String args[]) {
+      // Tarih object ini oluşturma
+      Date date = new Date();
+
+      // toString() kullanarak tarih ve saat i yazdırma
+      System.out.println(date.toString());
+   }
+}
