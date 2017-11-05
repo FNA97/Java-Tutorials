@@ -1,0 +1,18 @@
+package Tutorials;
+
+public class Test25 {
+
+	   public static void main(String[] args) {
+	      methodRankPoints(255.7);//255.7 olarak tanımlansın
+	   }
+
+	   public static void methodRankPoints(double points) {//double türünde geri dönmeyen bir fonksiyon
+	      if (points >= 202.5) {//büyükse
+	         System.out.println("Rank:A1");//rank:a1
+	      }else if (points >= 122.4) {
+	         System.out.println("Rank:A2");//202.5 den küçük 122.4 den büyükse Rank:a2
+	      }else {
+	         System.out.println("Rank:A3");//değilse rank:a3
+	      }
+	   }
+	}
