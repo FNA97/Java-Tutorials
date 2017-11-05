@@ -1,0 +1,22 @@
+package Tutorials;
+
+public class Test24{
+	   
+	   public static void main(String[] args) {
+	      int a = 11;//a yi declare et değerini 11 olarak ata
+	      int b = 6;//b yi declare et değerini 6 olarak ata
+	      int c = minFunction(a, b);// c yi declare et .bu bir fonksiyon olsun.Fonksiyon adı minFunction ve sadece a,b değii
+	      System.out.println("Minimum Value = " + c);//minimum değer
+	   }
+
+	   /** 2 sayıdan en küçüğünü döndüren fonksiyon */
+	   public static int minFunction(int n1, int n2) {
+	      int min;
+	      if (n1 > n2)
+	         min = n2;
+	      else
+	         min = n1;
+
+	      return min; 
+	   }
+	}
