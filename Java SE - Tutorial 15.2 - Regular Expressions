@@ -1,0 +1,23 @@
+package Tutorials;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test20 {
+
+   private static final String REGEX = "\\bcat\\b";// Regex cat olarak tanımladık
+   private static final String INPUT = "cat cat cat cattie cat";//aranacak inputumuz 
+
+   public static void main( String args[] ) {
+      Pattern p = Pattern.compile(REGEX);//aranacak kelime (cat)
+      Matcher m = p.matcher(INPUT);   // eşleştirme object imiz
+      int count = 0;//sayaç
+
+      while(m.find()) {// m.find olduğunda
+         count++;
+         System.out.println("Match number "+count);//sayaç 1 artsın
+         System.out.println("start(): "+m.start());// başlangıç stringi yazsın
+         System.out.println("end(): "+m.end());//bitiş stringi yazsın
+      }
+   }
+}
