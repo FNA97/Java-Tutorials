@@ -1,0 +1,49 @@
+package Tutorials;
+public class This_Example {
+	   
+	   int num = 10;//num declare et 10 olarak değer ata
+		
+	   This_Example() {// method tanımla
+	      System.out.println("This is an example program on keyword this");	//bunu printlesin
+	   }
+
+	   This_Example(int num) {//integer parametresine bağlı method tanımla
+	      // Default constructor kullanalım
+	      this();
+	      
+	      //this in değeri num olarak değiştirilyor.
+	      this.num = num;	   
+	   }
+	   
+	   public void greet() {//method tanımla
+	      System.out.println("Hi Welcome to Tutorialspoint");//bunu printlesin
+	   }
+	      
+	   public void print() {//method tanımla
+	      // num u declare et 20 olarak değer ata
+	      int num = 20;
+	      
+	      // Num u bastır
+	      System.out.println("value of local variable num is : "+num);
+	      
+	      // this.num u bastır
+	      System.out.println("value of instance variable num is : "+this.num);
+	      
+	      // greet methodunu kullan
+	      this.greet();     
+	   }
+	   
+	   public static void main(String[] args) {
+	      // Instantiating the class
+	      This_Example obj1 = new This_Example();//This_Example a yeni object tanımla
+	      
+	      // methodu object te kullan
+	      obj1.print();
+		  
+	      // yeni object oluştur ancak 30 değerini kullansın yani num 30 olucak constructor daki this obj2 olucak gibi..
+	      This_Example obj2 = new This_Example(30);
+	      
+	      // methodu object te kullan
+	      obj2.print(); 
+	   }
+	}
