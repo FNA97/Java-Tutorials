@@ -1,0 +1,30 @@
+package Tutorials;
+
+public class Test26 {
+
+	   public static void main(String[] args) {
+	      int a = 30;//a yi declare et değeri 30 olarak ata
+	      int b = 45;//b yi declare et değeri 45 olarak ata
+	      System.out.println("Before swapping, a = " + a + " and b = " + b);//a ve b değişmeden önceki hali printle
+
+	      // değiştirme fonksiyonu tanımla
+	      swapFunction(a, b);//tanım
+	      System.out.println("\n**Now, Before and After swapping values will be same here**:");//***************************************************
+	      System.out.println("After swapping, a = " + a + " and b is " + b);//a 45 b 30 oldu
+	   }
+
+	   public static void swapFunction(int a, int b) {//şimdi tanımlayalım
+	      System.out.println("Before swapping(Inside), a = " + a + " b = " + b);//a ve b değişmeden önce
+	      
+	      // a ve b yi değiştirelim şuan swapFunction tanımlıyoruz
+	      int c = a;//yeni bir değişken kullanarak a ve b yi değiştirme
+	      a = b;
+	      b = c;
+	      System.out.println("After swapping(Inside), a = " + a + " b = " + b);//değişmiş hali
+	   }
+	}
+//Program önce main e girdi. a ve b değerlerini okudu
+// sonra swapFunction a girdi ve altta tanımladığımız kısıma döndü
+//orada inside olarak tanımladıklarımızı bize yazdırdı
+//sonra ********** olarak gösterdiğim yerden devam etti
+// ancak swapFunction a tekrar girmedi çünkü onu önceden yapmıştı.
