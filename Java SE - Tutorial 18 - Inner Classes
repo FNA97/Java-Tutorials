@@ -1,0 +1,26 @@
+package Tutorials;
+
+class Outer_Demo {
+	   // private değişken tanımladık değeri 175
+	   private int num = 175;  
+	   
+	   // iç sınıf
+	   public class Inner_Demo {
+	      public int getNum() {//getNum methodu ile num u elde ediyoruz
+	         System.out.println("This is the getnum method of the inner class");
+	         return num;//num u döndür
+	      }
+	   }
+	}
+
+	public class Test30 {
+
+	   public static void main(String args[]) {
+	      // Outer Demo classına git ve yeni bir outer oluştur
+	      Outer_Demo outer = new Outer_Demo();
+	      
+	      // Outer demo yu kullan ve inner demoya yeni bir inner tanımla.
+	      Outer_Demo.Inner_Demo inner = outer.new Inner_Demo();
+	      System.out.println(inner.getNum());//inner.getNum methodu ile outer dan num değerini elde et ve printle
+	   }
+	}
