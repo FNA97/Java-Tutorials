@@ -1,30 +1,39 @@
 package Tutorials;
 
-public class Test26 {
+public class Test27{
 
 	   public static void main(String[] args) {
-	      int a = 30;//a yi declare et değeri 30 olarak ata
-	      int b = 45;//b yi declare et değeri 45 olarak ata
-	      System.out.println("Before swapping, a = " + a + " and b = " + b);//a ve b değişmeden önceki hali printle
-
-	      // değiştirme fonksiyonu tanımla
-	      swapFunction(a, b);//tanım
-	      System.out.println("\n**Now, Before and After swapping values will be same here**:");//***************************************************
-	      System.out.println("After swapping, a = " + a + " and b is " + b);//a 45 b 30 oldu
+	      int a = 11;// a yı declare et değeri 11 olarak ata
+	      int b = 6;// b yi declare et değeri 6 olarak ata
+	      double c = 7.3; // c yi declare et değeri 7.3 olarak ata
+	      double d = 9.4; // d yi declare et değeri 9.4 olarak ata
+	      int result1 = minFunction(a, b);//result1 integer bir değer olsun ve sonucu minFunction(a,b) nin döndürdüğü değer olarak atansın
+	      
+	      // aynı fonksiyonu farklı parametrelerle tekrar tanımla
+	      double result2 = minFunction(c, d);//c ve d parametleriyle.. ve double cinsinden
+	      System.out.println("Minimum Value = " + result1);//min değer(int)
+	      System.out.println("Minimum Value = " + result2);//min değer(double)
 	   }
 
-	   public static void swapFunction(int a, int b) {//şimdi tanımlayalım
-	      System.out.println("Before swapping(Inside), a = " + a + " b = " + b);//a ve b değişmeden önce
-	      
-	      // a ve b yi değiştirelim şuan swapFunction tanımlıyoruz
-	      int c = a;//yeni bir değişken kullanarak a ve b yi değiştirme
-	      a = b;
-	      b = c;
-	      System.out.println("After swapping(Inside), a = " + a + " b = " + b);//değişmiş hali
+	   // integer için
+	   public static int minFunction(int n1, int n2) {
+	      int min;//min declare et
+	      if (n1 > n2)// n1 n2 den büyükse
+	         min = n2;// küçük olan n2
+	      else//değilse
+	         min = n1;//küçük olan n1
+
+	      return min; //küçüğü döndür
+	   }
+	   
+	   //double için
+	   public static double minFunction(double n1, double n2) {
+	     double min;//double min declare et
+	      if (n1 > n2)//n1 n2 den büyükse
+	         min = n2;//min olan n2
+	      else//değilse
+	         min = n1;//n1
+
+	      return min; //döndür
 	   }
 	}
-//Program önce main e girdi. a ve b değerlerini okudu
-// sonra swapFunction a girdi ve altta tanımladığımız kısıma döndü
-//orada inside olarak tanımladıklarımızı bize yazdırdı
-//sonra ********** olarak gösterdiğim yerden devam etti
-// ancak swapFunction a tekrar girmedi çünkü onu önceden yapmıştı.
