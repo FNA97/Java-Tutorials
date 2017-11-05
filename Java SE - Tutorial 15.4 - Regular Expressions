@@ -1,0 +1,20 @@
+package Tutorials;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test22 {
+
+   private static String REGEX = "dog";//aranacak string
+   private static String INPUT = "The dog says meow. " + "All dogs say meow.";//hangi string içinde aranacak?
+   private static String REPLACE = "cat";//değiştirilecek string
+
+   public static void main(String[] args) {
+      Pattern p = Pattern.compile(REGEX);//aranacak string
+      
+      // eşleştirici
+      Matcher m = p.matcher(INPUT); 
+      INPUT = m.replaceAll(REPLACE);//bulunursa dog ile cat değiştirilsin.
+      System.out.println(INPUT);//yazdır
+   }
+}
