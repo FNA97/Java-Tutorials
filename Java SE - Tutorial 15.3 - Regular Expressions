@@ -1,0 +1,23 @@
+package Tutorials;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Test21 {
+
+   private static final String REGEX = "foo";//aranan string
+   private static final String INPUT = "fooooooooooooooooo";//aranacak string
+   private static Pattern pattern;//foo
+   private static Matcher matcher;//eşleştirici
+
+   public static void main( String args[] ) {
+      pattern = Pattern.compile(REGEX);//foo olarak belirlendi
+      matcher = pattern.matcher(INPUT);//inputta aranacak
+
+      System.out.println("Current REGEX is: "+REGEX);//foo
+      System.out.println("Current INPUT is: "+INPUT);//fooooooooo
+
+      System.out.println("lookingAt(): "+matcher.lookingAt());//bakıldığında var evet.
+      System.out.println("matches(): "+matcher.matches());//ancak eşleşme yok.
+   }
+}
