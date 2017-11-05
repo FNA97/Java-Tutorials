@@ -1,0 +1,17 @@
+package Tutorials;
+
+public class Test29{
+
+	   public static void main(String args[]) {
+	      int a[] = new int[2];//3 elemanlı bir liste tanımladık
+	      try {//dene
+	         System.out.println("Access element three :" + a[3]);//başarılıysa a[3] ü ekle
+	      } catch (ArrayIndexOutOfBoundsException e) {//hata varsa
+	         System.out.println("Exception thrown  :" + e);//e yi ekle
+	      }finally {//bitir
+	         a[0] = 6;//1. elemanı 6 olsun
+	         System.out.println("First element value: " + a[0]);//1. elemanı yazdır
+	         System.out.println("The finally statement is executed");//bitir kısmı başarıyla çalıştı.
+	      }
+	   }
+	}
