@@ -1,0 +1,28 @@
+package Tutorials;
+
+public class Test28 {
+
+	   public static void main(String args[]) {
+	      // args kullanarak bir method cagır tanımını aşağıda yapıyoruz.
+		   printMax(34, 3, 3, 2, 56.5);
+	      printMax(new double[]{1, 2, 3});//yeni bir liste tanımla elemanları double türünde olsun
+	   }
+
+	   public static void printMax( double... numbers) {//tanım kısmı
+	      if (numbers.length == 0) {//boy u 0 ise 
+	         System.out.println("No argument passed");//yazdır
+	         return;//döndür
+	      }
+
+	      double result = numbers[0];//0. elemanı result olsun ve double olarak declare edilsin
+
+	      for (int i = 1; i <  numbers.length; i++)//for döndür. uzunluğu kadar
+	      if (numbers[i] >  result)//i. elemanı resulttan büyükse
+	      result = numbers[i];//yeni result i. eleman olsun
+	      System.out.println("The max value is " + result);//yazdır
+	   }
+	}
+
+//ilk once args dan en büyük olan 56.5 i alır
+//sonra printmax(new double[]{1,2,3}) kısmına girer
+//method çalışır ve yeni result 3 olur.Ancak double olduğundan 3.0 şeklinde printlenir.
