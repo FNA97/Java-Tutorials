@@ -217,10 +217,6 @@ interface kampanyalar<Biletler>{
 			}
 		}
 	}
-	public static void asd(int x1, int y1) {
-		// TODO Auto-generated method stub
-		
-	}
 }
 public class ShoppingCart{
 	static public int islem;
@@ -361,7 +357,6 @@ public static void main(String []args) {
 		 
 	 }
 }
-
 
 // Şimdi durum şu Menü de 4 e basınca isteğe yönelik kampanya oluşturma imkanı vermem gerekiyor.
 // Bunu sağlamak için kampanyaEkle methodunu oluşturdum.
