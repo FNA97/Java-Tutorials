@@ -1,0 +1,141 @@
+import java.util.Scanner;
+interface kampanyalar{
+	
+}
+public class ShoppingCart{
+	static public int islem;
+	static public String isim;
+	static public double toplam = 0.0;
+	static public int sinemaSayac=0;
+	static public int bungeeSayac=0;
+	static public int operaSayac=0;
+	static public String secim1;
+	static public int sonuc1;
+	static public int sonuc2;
+	static public int sonuc3;
+		
+	
+
+		public void menuGoster(){
+			System.out.println("Merhaba,");
+			System.out.println("Shopping Cart Uygulamasına Hoşgeldiniz.");
+			System.out.println("Lütfen aşağıdan işlem numarası seçiniz.");
+			System.out.println("1 - Shopping Cart'ı incele");
+			System.out.println("2 - Kampanyalar");
+			System.out.println("3 - Satın al");
+			System.out.println("4 - Kampanya oluştur/ekle veya Kampanya sil");
+			System.out.println("0 - Çıkış yap");
+			}
+
+		public void islemNo(){
+			System.out.println("Lütfen işlem numarası giriniz : ");
+			Scanner isNo = new Scanner(System.in);
+			islem=isNo.nextInt();
+			switch (islem)
+			{
+			case 0:
+				System.out.println("Seçilen işlem : Çıkış yap");
+				System.out.println("İyi günler.");
+				break;
+			case 1:
+				System.out.println("Seçilen işlem : Shopping Cart'ı incele");
+				System.out.println("Opera Bileti          : 300$" );
+				System.out.println("Sinema Bileti         : 30$");
+				System.out.println("Bungee Jumping Bileti :100$");
+				System.out.println("------------------------------");
+				System.out.println("Ana menüye dönmek için 0 tuşlayınız.");
+				System.out.println("------------------------------");
+				Scanner isNo2 = new Scanner(System.in);
+				islem=isNo2.nextInt();
+				if (islem==0){
+					menuGoster();
+					islemNo();
+				}
+			case 2:
+				System.out.println("Seçilen işlem : Kampanyalar");
+				System.out.println("Şuan geçerli kampanyalar");
+				System.out.println("3 Opera bileti al 1 i bizden olsun!");
+				System.out.println("1 Opera bileti alana 1 Sinema bileti bedava!");
+				System.out.println("1 Bungee Jumping bileti alana Sinema biletinde 5$ indirim bizden!");
+				System.out.println("------------------------------");
+				System.out.println("Ana menüye dönmek için 0 tuşlayınız.");
+				System.out.println("------------------------------");
+				Scanner isNo3 = new Scanner(System.in);
+				islem=isNo3.nextInt();
+				if (islem==0){
+					menuGoster();
+					islemNo();
+				}
+			case 3:
+				System.out.println("Seçilen işlem : Satın al");
+				System.out.println("Lütfen satın almak istediğiniz bileti Opera,Sinema VEYA Bungee Şeklinde yazınız.Çıkış yapmak için Çıkış yazmanınız yeterli.");
+				while(true){
+					System.out.println("Bilet Türü : ");
+					Scanner secim = new Scanner(System.in);
+					secim1= secim.nextLine();
+					if (secim1.equals("Opera")){
+						Biletler operaBilet = Biletler.OPERA;
+						sonuc1+= (operaBilet.getBiletler());
+						operaSayac+=1;
+					}else if(secim1.equals("Sinema")){
+						Biletler sinemaBilet = Biletler.SINEMA;
+						sonuc2+= sinemaBilet.getBiletler();
+						sinemaSayac+=1;
+					}else if(secim1.equals("Bungee")){
+						Biletler bungeeBilet = Biletler.BUNGEEJUMPING;
+						sonuc3+= bungeeBilet.getBiletler();
+						bungeeSayac+=1;
+					}
+					else if(secim1!=("Çıkış")){
+						add();
+						total();
+						break;
+					}
+				}
+				break;
+			case 4:
+				System.out.println("Seçilen işlem :  Kampanya oluştur/ekle veya Kampanya sil");
+				
+				break;
+			default:
+				System.out.println("------------------------------");
+				System.out.println("Geçersiz bir işlem yaptınız.");
+				System.out.println("------------------------------");
+				menuGoster();
+				islemNo();
+			}
+				
+	}
+		public enum Biletler{
+			OPERA(300),
+			SINEMA(30),
+			BUNGEEJUMPING(100);
+			public int biletler;
+			
+			Biletler(int biletler) {
+				this.biletler = biletler;
+			}
+			public int getBiletler(){
+				return this.biletler;
+			}
+		}
+		
+		public void add(){
+			toplam+=sonuc1;
+			toplam+=sonuc2;
+			toplam+=sonuc3;
+		}
+		public void total(){
+			System.out.println("Ödenmesi gereken toplam tutar : "+toplam+"$ olarak hesaplandı.");
+		}
+public static void main(String []args) {
+		 ShoppingCart Menu = new ShoppingCart();
+		 Menu.menuGoster();
+		 Menu.islemNo();
+		 
+	 }
+}
+
+//Kampanyalar interfaceine mevcut kampanyaları ve eklenecek kampanyaları method olarak ekle
+//Saat 05:26
+//6.11.2017
