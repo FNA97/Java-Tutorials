@@ -1,6 +1,10 @@
 import java.util.Scanner;
-interface kampanyalar{
-	
+interface kampanyalar<Biletler>{
+	public static void opera3al2ode(){
+		if (ShoppingCart.operaSayac%3==0){
+			ShoppingCart.Biletler operaBilet = ShoppingCart.Biletler.OPERA;
+			ShoppingCart.sonuc1-= (operaBilet.getBiletler());
+		}
 }
 public class ShoppingCart{
 	static public int islem;
@@ -77,6 +81,7 @@ public class ShoppingCart{
 						Biletler operaBilet = Biletler.OPERA;
 						sonuc1+= (operaBilet.getBiletler());
 						operaSayac+=1;
+						kampanyalar.opera3al2ode();
 					}else if(secim1.equals("Sinema")){
 						Biletler sinemaBilet = Biletler.SINEMA;
 						sonuc2+= sinemaBilet.getBiletler();
