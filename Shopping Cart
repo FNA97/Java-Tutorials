@@ -419,10 +419,11 @@ public class ShoppingCart{
 						bungeeSayac+=1;
 					}
 					else if(secim1!=("Çıkış")) {
-							kampanyalar.eklenenKampanyalar202();
-							kampanyalar.eklenenKampanyalar101();
+							
 							kampanyalar.opera1al1Sinema();
 							kampanyalar.bungeeAlSinemaIndirim();	
+							kampanyalar.eklenenKampanyalar202();
+							kampanyalar.eklenenKampanyalar101();
 							break;
 						}
 					}
