@@ -80,7 +80,7 @@ interface kampanyalar<Biletler>{
 			ShoppingCart.sonuc3-= ((bungeeBilet.getBiletler())*ShoppingCart.Y1);
 			ShoppingCart.add();
 			ShoppingCart.total();
-			System.out.println(ShoppingCart.X1+" Opera bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyasından faydalandınız.");
+			System.out.println(ShoppingCart.X1+" Bungee bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyasından faydalandınız.");
 			System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
 			Scanner isNo3 = new Scanner(System.in);
 			ShoppingCart.islem=isNo3.nextInt();
@@ -192,6 +192,7 @@ interface kampanyalar<Biletler>{
 			}
 			else{
 				System.out.println("Eklenen kampanya bulunamadı. *202*");
+				kampanyalar.eklenenKampanyalar101();
 				ShoppingCart.add();
 				ShoppingCart.total();
 				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
@@ -473,5 +474,3 @@ public static void main(String []args) {
 // ama 101 çalışmıyor çünkü 202 methodu bitince while devam etmiyor.
 // çözüm if kod==202 ve if kod==101 ama bunu yapınca da while dönmüyor
 //herhangi bir bilet girince otomatik while duruyor Case 3 den Case 4 e atlıyor..
-
-// Shopping\src\ShoppingCart.java
