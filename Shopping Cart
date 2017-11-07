@@ -1,5 +1,14 @@
 import java.util.Scanner;
 interface kampanyalar<Biletler>{
+	public static void sifirla(){
+		ShoppingCart.toplam = 0;
+		ShoppingCart.sonuc1 = 0;
+		ShoppingCart.sonuc2 = 0;
+		ShoppingCart.sonuc3 = 0;
+		ShoppingCart.bungeeSayac = 0;
+		ShoppingCart.operaSayac = 0 ;
+		ShoppingCart.sinemaSayac = 0;
+	}
 	public static void opera3al2ode(){
 		if (ShoppingCart.operaSayac%3==0){
 			ShoppingCart.Biletler operaBilet = ShoppingCart.Biletler.OPERA;
@@ -34,6 +43,120 @@ interface kampanyalar<Biletler>{
 			ShoppingCart.toplam -= (((yuzde/100)*5)*x);
 		}
 	}
+	public static void eklenenKampanyalar202(){
+		do{
+			if (ShoppingCart.operaSayac==ShoppingCart.X2 & ShoppingCart.sinemaSayac!=0 & ShoppingCart.X2!=0 & ShoppingCart.Y2!=0){
+				ShoppingCart.Biletler sinemaBilet = ShoppingCart.Biletler.SINEMA;
+				ShoppingCart.sonuc2-=(ShoppingCart.Y2*(sinemaBilet.getBiletler()));
+				ShoppingCart.add();
+				ShoppingCart.total();
+				System.out.println(ShoppingCart.X2+" Opera bileti alana "+ShoppingCart.Y2+" Sinema bileti bedava! Kampanyasından faydalandınız.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo4 = new Scanner(System.in);
+				ShoppingCart.islem=isNo4.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			 if (ShoppingCart.sinemaSayac==ShoppingCart.X2 & ShoppingCart.bungeeSayac!=0 & ShoppingCart.X2!=0 & ShoppingCart.Y2!=0){
+				ShoppingCart.Biletler bungeeBilet = ShoppingCart.Biletler.BUNGEEJUMPING;
+				ShoppingCart.sonuc3-=(ShoppingCart.Y2*(bungeeBilet.getBiletler()));
+				ShoppingCart.add();
+				ShoppingCart.total();
+				System.out.println(ShoppingCart.X2+" Sinema bileti alana "+ShoppingCart.Y2+" Bungee Jumping bedava! Kampanyasından faydalandınız.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo5 = new Scanner(System.in);
+				ShoppingCart.islem=isNo5.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			 if (ShoppingCart.operaSayac==ShoppingCart.X2 & ShoppingCart.bungeeSayac!=0 & ShoppingCart.X2!=0 & ShoppingCart.Y2!=0){
+				ShoppingCart.Biletler bungeeBilet = ShoppingCart.Biletler.BUNGEEJUMPING;
+				ShoppingCart.sonuc3-=(ShoppingCart.Y2*(bungeeBilet.getBiletler()));
+				ShoppingCart.add();
+				ShoppingCart.total();
+				System.out.println(ShoppingCart.X2+" Opera bileti alana "+ShoppingCart.Y2+" Bungee Jumping bedava! Kampanyasından faydalandınız.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo6 = new Scanner(System.in);
+				ShoppingCart.islem=isNo6.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			if (ShoppingCart.sinemaSayac==ShoppingCart.X2 & ShoppingCart.operaSayac!=0 & ShoppingCart.X2!=0 & ShoppingCart.Y2!=0){
+				ShoppingCart.Biletler operaBilet = ShoppingCart.Biletler.OPERA;
+				ShoppingCart.sonuc1-=(ShoppingCart.Y2*(operaBilet.getBiletler()));
+				ShoppingCart.add();
+				ShoppingCart.total();
+				System.out.println(ShoppingCart.X2+" Sinema bileti alana "+ShoppingCart.Y2+" Opera bileti bedava! Kampanyasından faydalandınız.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo7 = new Scanner(System.in);
+				ShoppingCart.islem=isNo7.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			if (ShoppingCart.bungeeSayac==ShoppingCart.X2 & ShoppingCart.sinemaSayac!=0 & ShoppingCart.X2!=0 & ShoppingCart.Y2!=0){
+				ShoppingCart.Biletler sinemaBilet = ShoppingCart.Biletler.SINEMA;
+				ShoppingCart.sonuc2-=(ShoppingCart.Y2*(sinemaBilet.getBiletler()));
+				ShoppingCart.add();
+				ShoppingCart.total();
+				System.out.println(ShoppingCart.X2+" Bungee Jumping bileti alana "+ShoppingCart.Y2+" Sinema bileti bedava! Kampanyasından faydalandınız.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo8 = new Scanner(System.in);
+				ShoppingCart.islem=isNo8.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			if (ShoppingCart.bungeeSayac==ShoppingCart.X2 & ShoppingCart.operaSayac!=0 & ShoppingCart.X2!=0 & ShoppingCart.Y2!=0){
+				ShoppingCart.Biletler operaBilet = ShoppingCart.Biletler.OPERA;
+				ShoppingCart.sonuc1-=(ShoppingCart.Y2*(operaBilet.getBiletler()));
+				ShoppingCart.add();
+				ShoppingCart.total();
+				System.out.println(ShoppingCart.X2+" Bungee Jumping bileti alana "+ShoppingCart.Y2+" Opera bileti bedava! Kampanyasından faydalandınız.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo9 = new Scanner(System.in);
+				ShoppingCart.islem=isNo9.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			else{
+				System.out.println("Eklenen kampanya bulunamadı.");
+				ShoppingCart.add();
+				ShoppingCart.total();
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo10 = new Scanner(System.in);
+				ShoppingCart.islem=isNo10.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}	
+		}while(ShoppingCart.secim1!=("Çıkış"));
+	}
 	public static void kampanyaEkle(){
 		System.out.println("Lütfen eklemek istediğiniz kampanya kodunu giriniz.");
 		System.out.println("--------------------------------------------------------------------------------------------------");
@@ -45,179 +168,151 @@ interface kampanyalar<Biletler>{
 		ShoppingCart.kod = kamp.nextInt();
 		switch (ShoppingCart.kod){
 		case 101:
-			int X1;
-			int Y1;
-			String tur1;
 			System.out.println("Lütfen X değerini giriniz.");
 			Scanner x1deg = new Scanner(System.in);
-			X1 = x1deg.nextInt();
+			ShoppingCart.X1 = x1deg.nextInt();
 			System.out.println("Lütfen Y değerini giriniz.");
 			Scanner y1deg = new Scanner(System.in);
-			Y1 = y1deg.nextInt();
+			ShoppingCart.Y1 = y1deg.nextInt();
 			System.out.println("Lütfen bilet türünü Opera,Sinema veya Bungee şeklinde giriniz.");
 			Scanner tur1deg = new Scanner(System.in);
-			tur1 = tur1deg.nextLine();
-			if (tur1.equals("Opera")){
-				if (ShoppingCart.operaSayac%X1==0){
+			ShoppingCart.tur1 = tur1deg.nextLine();
+			if (ShoppingCart.tur1.equals("Opera")){
+				if (ShoppingCart.operaSayac%ShoppingCart.X1==0){
 					ShoppingCart.Biletler operaBilet = ShoppingCart.Biletler.OPERA;
-					ShoppingCart.sonuc1-= ((operaBilet.getBiletler())*Y1);
-					System.out.println(X1+" Opera bileti al "+Y1+" i bizden olsun! Kampanyası oluşturuldu.");
+					ShoppingCart.sonuc1-= ((operaBilet.getBiletler())*ShoppingCart.Y1);
+					System.out.println(ShoppingCart.X1+" Opera bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyası oluşturuldu.");
 					System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
 					Scanner isNo4 = new Scanner(System.in);
 					ShoppingCart.islem=isNo4.nextInt();
 					if (ShoppingCart.islem==0){
+						sifirla();
 						ShoppingCart.menuGoster();
 						ShoppingCart.islemNo();
 						
 					}
-					System.out.println(X1+" Opera bileti al "+Y1+" i bizden olsun! Kampanyasından yararlandınız.");
+					System.out.println(ShoppingCart.X1+" Opera bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyasından yararlandınız.");
 					break;
 				}
 				
-			}if (tur1.equals("Sinema")){
-				if (ShoppingCart.sinemaSayac%X1==0){
+			}if (ShoppingCart.tur1.equals("Sinema")){
+				if (ShoppingCart.sinemaSayac%ShoppingCart.X1==0){
 					ShoppingCart.Biletler sinemaBilet = ShoppingCart.Biletler.SINEMA;
 					ShoppingCart.sonuc2-= (sinemaBilet.getBiletler());
-					System.out.println(X1+" Sinema bileti al "+Y1+" i bizden olsun! Kampanyası oluşturuldu.");
+					System.out.println(ShoppingCart.X1+" Sinema bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyası oluşturuldu.");
 					System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
 					Scanner isNo4 = new Scanner(System.in);
 					ShoppingCart.islem=isNo4.nextInt();
 					if (ShoppingCart.islem==0){
+						sifirla();
 						ShoppingCart.menuGoster();
 						ShoppingCart.islemNo();
 						
 					}
-					System.out.println(X1+" Sinema bileti al "+Y1+" i bizden olsun! Kampanyasından yararlandınız.");
+					System.out.println(ShoppingCart.X1+" Sinema bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyasından yararlandınız.");
 					break;
 				}
 				
-			}if (tur1.equals("Bungee")){
-				if (ShoppingCart.bungeeSayac%X1==0){
+			}if (ShoppingCart.tur1.equals("Bungee")){
+				if (ShoppingCart.bungeeSayac%ShoppingCart.X1==0){
 					ShoppingCart.Biletler bungeeBilet = ShoppingCart.Biletler.BUNGEEJUMPING;
 					ShoppingCart.sonuc3-= (bungeeBilet.getBiletler());
-					System.out.println(X1+" Bungee Jumping bileti al "+Y1+" i bizden olsun! Kampanyası oluşturuldu.");
+					System.out.println(ShoppingCart.X1+" Bungee Jumping bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyası oluşturuldu.");
 					System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
 					Scanner isNo4 = new Scanner(System.in);
 					ShoppingCart.islem=isNo4.nextInt();
 					if (ShoppingCart.islem==0){
+						sifirla();
 						ShoppingCart.menuGoster();
 						ShoppingCart.islemNo();
 						
 					}
-					System.out.println(X1+" Bungee Jumping bileti al "+Y1+" i bizden olsun! Kampanyasından yararlandınız.");
+					System.out.println(ShoppingCart.X1+" Bungee Jumping bileti al "+ShoppingCart.Y1+" i bizden olsun! Kampanyasından yararlandınız.");
 					break;
 				}
 			}
 		case 202:
-			int X2;
-			int Y2;
-			String tur2;
-			String tur3;
 			System.out.println("Lütfen X değerini giriniz.");
 			Scanner x2deg = new Scanner(System.in);
-			X2 = x2deg.nextInt();
+			ShoppingCart.X2 = x2deg.nextInt();
 			System.out.println("Lütfen Y değerini giriniz.");
 			Scanner y2deg = new Scanner(System.in);
-			Y2 = y2deg.nextInt();
+			ShoppingCart.Y2 = y2deg.nextInt();
 			System.out.println("Lütfen alınan bilet türünü Opera,Sinema veya Bungee şeklinde giriniz.");
 			Scanner tur2deg = new Scanner(System.in);
-			tur2 = tur2deg.nextLine();
+			ShoppingCart.tur2 = tur2deg.nextLine();
 			System.out.println("Lütfen hediye bilet türünü Opera,Sinema veya Bungee şeklinde giriniz.");
 			Scanner tur3deg = new Scanner(System.in);
-			tur3 = tur3deg.nextLine();
-			if (tur2.equals("Opera") & tur3.equals("Sinema")){
-				System.out.println(X2+" Opera bileti alana "+Y2+" Sinema bileti bedava! Kampanyası oluşturuldu.");
+			ShoppingCart.tur3 = tur3deg.nextLine();
+			if (ShoppingCart.tur2.equals("Opera") & ShoppingCart.tur3.equals("Sinema")){
+				System.out.println(ShoppingCart.X2+" Opera bileti alana "+ShoppingCart.Y2+" Sinema bileti bedava! Kampanyası oluşturuldu.");
 				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
 				Scanner isNo4 = new Scanner(System.in);
 				ShoppingCart.islem=isNo4.nextInt();
 				if (ShoppingCart.islem==0){
+					sifirla();
 					ShoppingCart.menuGoster();
 					ShoppingCart.islemNo();
-					
-				}
-				if (ShoppingCart.operaSayac==X2 & ShoppingCart.sinemaSayac!=0){
-					ShoppingCart.Biletler sinemaBilet = ShoppingCart.Biletler.SINEMA;
-					ShoppingCart.sonuc2-=(Y2*(sinemaBilet.getBiletler()));
 					
 				}
 			}
-			if (tur2.equals("Sinema") & tur3.equals("Bungee")){
-				System.out.println(X2+" Sinema bileti alana "+Y2+" Bungee Jumping bileti bedava! Kampanyası oluşturuldu.");
+			if (ShoppingCart.tur2.equals("Sinema") & ShoppingCart.tur3.equals("Bungee")){
+				System.out.println(ShoppingCart.X2+" Sinema bileti alana "+ShoppingCart.Y2+" Bungee Jumping bileti bedava! Kampanyası oluşturuldu.");
 				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
 				Scanner isNo4 = new Scanner(System.in);
 				ShoppingCart.islem=isNo4.nextInt();
 				if (ShoppingCart.islem==0){
+					sifirla();
 					ShoppingCart.menuGoster();
 					ShoppingCart.islemNo();
-					
-				}
-				if (ShoppingCart.sinemaSayac==X2 & ShoppingCart.bungeeSayac!=0){
-					ShoppingCart.Biletler bungeeBilet = ShoppingCart.Biletler.BUNGEEJUMPING;
-					ShoppingCart.sonuc3-=(Y2*(bungeeBilet.getBiletler()));
-					
-					}
-			}
-			if (tur2.equals("Opera") & tur3.equals("Bungee")){
-				System.out.println(X2+" Opera bileti alana "+Y2+" Bungee Jumping bileti bedava! Kampanyası oluşturuldu.");
-				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
-				Scanner isNo4 = new Scanner(System.in);
-				ShoppingCart.islem=isNo4.nextInt();
-				if (ShoppingCart.islem==0){
-					ShoppingCart.menuGoster();
-					ShoppingCart.islemNo();
-					
-				}
-				if (ShoppingCart.operaSayac==X2 & ShoppingCart.bungeeSayac!=0){
-					ShoppingCart.Biletler bungeeBilet = ShoppingCart.Biletler.BUNGEEJUMPING;
-					ShoppingCart.sonuc3-=(Y2*(bungeeBilet.getBiletler()));
-					
-					}
-			}
-			if (tur2.equals("Sinema") & tur3.equals("Opera")){
-				System.out.println(X2+" Sinema bileti alana "+Y2+" Opera bileti bedava! Kampanyası oluşturuldu.");
-				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
-				Scanner isNo4 = new Scanner(System.in);
-				ShoppingCart.islem=isNo4.nextInt();
-				if (ShoppingCart.islem==0){
-					ShoppingCart.menuGoster();
-					ShoppingCart.islemNo();
-					
-				}
-				if (ShoppingCart.sinemaSayac==X2 & ShoppingCart.operaSayac!=0){
-					ShoppingCart.Biletler operaBilet = ShoppingCart.Biletler.OPERA;
-					ShoppingCart.sonuc1-=(Y2*(operaBilet.getBiletler()));
-				
-				}
-			}
-			if (tur2.equals("Bungee") & tur3.equals("Sinema")){
-				System.out.println(X2+" Bungee Jumping bileti alana "+Y2+" Sinema bileti bedava! Kampanyası oluşturuldu.");
-				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
-				Scanner isNo4 = new Scanner(System.in);
-				ShoppingCart.islem=isNo4.nextInt();
-				if (ShoppingCart.islem==0){
-					ShoppingCart.menuGoster();
-					ShoppingCart.islemNo();
-					
-				}
-				if (ShoppingCart.bungeeSayac==X2 & ShoppingCart.sinemaSayac!=0){
-					ShoppingCart.Biletler sinemaBilet = ShoppingCart.Biletler.SINEMA;
-					ShoppingCart.sonuc2-=(Y2*(sinemaBilet.getBiletler()));
 					
 				}
 			}
-			if (tur2.equals("Bungee") & tur3.equals("Opera")){
-				System.out.println(X2+" Bungee bileti alana "+Y2+" Opera bileti bedava! Kampanyası oluşturuldu.");
+			if (ShoppingCart.tur2.equals("Opera") & ShoppingCart.tur3.equals("Bungee")){
+				System.out.println(ShoppingCart.X2+" Opera bileti alana "+ShoppingCart.Y2+" Bungee Jumping bileti bedava! Kampanyası oluşturuldu.");
 				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
 				Scanner isNo4 = new Scanner(System.in);
 				ShoppingCart.islem=isNo4.nextInt();
 				if (ShoppingCart.islem==0){
+					sifirla();
 					ShoppingCart.menuGoster();
 					ShoppingCart.islemNo();
 					
 				}
-				if (ShoppingCart.bungeeSayac%X2==0 & ShoppingCart.operaSayac!=0){
-					ShoppingCart.Biletler operaBilet = ShoppingCart.Biletler.OPERA;
-					ShoppingCart.sonuc1-=(Y2*(operaBilet.getBiletler()));
+			}
+			if (ShoppingCart.tur2.equals("Sinema") & ShoppingCart.tur3.equals("Opera")){
+				System.out.println(ShoppingCart.X2+" Sinema bileti alana "+ShoppingCart.Y2+" Opera bileti bedava! Kampanyası oluşturuldu.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo4 = new Scanner(System.in);
+				ShoppingCart.islem=isNo4.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			if (ShoppingCart.tur2.equals("Bungee") & ShoppingCart.tur3.equals("Sinema")){
+				System.out.println(ShoppingCart.X2+" Bungee Jumping bileti alana "+ShoppingCart.Y2+" Sinema bileti bedava! Kampanyası oluşturuldu.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo4 = new Scanner(System.in);
+				ShoppingCart.islem=isNo4.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
+					
+				}
+			}
+			if (ShoppingCart.tur2.equals("Bungee") & ShoppingCart.tur3.equals("Opera")){
+				System.out.println(ShoppingCart.X2+" Bungee bileti alana "+ShoppingCart.Y2+" Opera bileti bedava! Kampanyası oluşturuldu.");
+				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
+				Scanner isNo4 = new Scanner(System.in);
+				ShoppingCart.islem=isNo4.nextInt();
+				if (ShoppingCart.islem==0){
+					sifirla();
+					ShoppingCart.menuGoster();
+					ShoppingCart.islemNo();
 					
 				}
 			}
@@ -236,6 +331,14 @@ public class ShoppingCart{
 	static public int sonuc2;
 	static public int sonuc3;
 	static public int kod;
+	static public int X1;
+	static public int Y1;
+	static public String tur1;
+	static public int X2;
+	static public int Y2;
+	static public String tur2;
+	static public String tur3;
+	
 		
 	
 
@@ -312,7 +415,7 @@ public class ShoppingCart{
 						bungeeSayac+=1;
 					}
 					else if(secim1!=("Çıkış")){
-						
+						kampanyalar.eklenenKampanyalar202();
 						kampanyalar.opera1al1Sinema();
 						kampanyalar.bungeeAlSinemaIndirim();
 						add();
