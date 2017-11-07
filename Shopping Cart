@@ -468,3 +468,7 @@ public static void main(String []args) {
 		 
 	 }
 }
+//421 de önce 202 olduğu için 202 kodlu kampanya sorunsuz çalışıyor.
+// ama 101 çalışmıyor çünkü 202 methodu bitince while devam etmiyor.
+// çözüm if kod==202 ve if kod==101 ama bunu yapınca da while dönmüyor
+//herhangi bir bilet girince otomatik while duruyor Case 3 den Case 4 e atlıyor..
