@@ -192,7 +192,6 @@ interface kampanyalar<Biletler>{
 			}
 			else{
 				System.out.println("Eklenen kampanya bulunamadı. *202*");
-				kampanyalar.eklenenKampanyalar101();
 				ShoppingCart.add();
 				ShoppingCart.total();
 				System.out.println("Ana menüye dönmek için 0 ı tuşlayınız.");
